@@ -276,6 +276,7 @@ const get_webgl = (METRIC) => new Promise(resolve => {
 					const first = context.getExtension(name)
 					return first !== context.getExtension(name)
 				})
+				console.log(extensionIdentityMismatches)
 			}
 		} catch (e) {
 			log_error(10, 'webgl_extensions_'+ contextType, e)
